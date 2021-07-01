@@ -10,98 +10,232 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <div class="icon__wrapper">
-        <img class="logo__icon" src="assets/img/white-smartphone.svg" alt="">
-      </div>
-      <p class="logo__text">Smartfix</p>
+  <div class="preloader-area">
+    <div class="preloader">
+      <div class="dot dot--1"></div>
+      <div class="dot dot--2"></div>
+      <div class="dot dot--3"></div>
+      <div class="dot dot--4"></div>
+      <div class="dot dot--5"></div>
+      <div class="dot dot--6"></div>
+      <div class="dot dot--7"></div>
+      <div class="dot dot--8"></div>
     </div>
-    <nav class="menu menu--open"> <!-- обертка=меню -->
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="#" class="menu__link">Услуги</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">Устройства</a>
-        </li>
-        <li class="menu__item">
-          <a href="comments.html" class="menu__link">Отзывы</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">Связаться с нами</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="burger-box">
-      <img class="burger-box--closed" src="assets/img/white-menu.svg" alt="">
+  </div>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="logo">
+        <div class="icon__wrapper">
+          <img class="logo__icon" src="assets/img/white-smartphone.svg" alt="">
+        </div>
+        <p class="logo__text">Smartfix</p>
+      </div>
+      <nav class="men-u menu--open"> <!-- обертка=меню -->
+        <ul class="header__menu menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Устройства</a>
+          </li>
+          <li class="menu__item">
+            <a href="comments.html" class="menu__link">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Связаться с нами</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger-box">
+        <img class="burger-box--closed" src="assets/img/menu.svg" alt="">
+      </div>
     </div>
   </header>
   <main class="main">
     <section class="section first-screen">
       <div class="first-screen__wrapper">
-        <h1 class="title first-screen__title">Быстрый ремонт всех видов телефонов</h1>
+        <h1 class="title first-screen__title">Быстрый ремонт телефонов в Минске</h1>
         <p class="first-screen__description">Диагностика бесплатно</p>
         <p class="first-screen__description">Гарантия 6 месяцев</p>
+        <div class="buttons">
+          <button class="btn btn--request"><a href="#request">Оставить заявку</a></button>
+          <button class="btn btn--comments"><a href="comments.html">Показать отзывы</a></button>
+        </div>
       </div>
-      <button class="btn btn--request"><a href="#request">Оставить заявку</a></button>
+    </section>
+    <section class="section services">
+      <div class="services__wrapper">
+        <h2 class="main-text main-text--big">Наши услуги</h2>
+        <div class="services__list list">
+          <div class="services__item">
+            <p class="main-text services__name">Замена экрана</p>
+            <div class="flip">
+              <div class="img__wrapper hhh front">
+                <img src="assets/img/broken glass.svg" alt="" class="services__icon">
+              </div>
+              <div class="prices"><span>от 40 руб.</span></div>
+            </div>
+          </div>
+          <div class="services__item">
+            <p class="main-text services__name">Замена динамика</p>
+            <div class="flip">
+              <div class="img__wrapper hhh front">
+                <img src="assets/img/dynamic.svg" alt="" class="services__icon">
+              </div>
+              <div class="prices"><span>от 40 руб.</span></div>
+            </div>
+          </div>
+          <div class="services__item">
+            <p class="main-text services__name">Замена корпуса</p>
+            <div class="flip">
+              <div class="img__wrapper hhh front">
+                <img src="assets/img/display.svg" alt="" class="services__icon">
+              </div>
+              <div class="prices"><span>от 40 руб.</span></div>
+            </div>
+        </div>
+        <button class="all-prices btn btn--prices"><a href="assets/docs/prices_2021.xlsx" class="all-prices__doc">Узнать все цены</a></button>
+      </div>
     </section>
     <section class="section brends">
-      <h2 class="main-text">Выберите бренд</h2>
-      <div class="brends__container">
-        <a class="brends__item" href="#">
-          <div class="brends__wrapper">
-            <div class="img__wrapper">
-              <img src="assets/img/apple.svg" alt="" class="brends__icon">
+      <div class="brends__wrapper">
+        <h2 class="main-text">Устройства, которые мы ремонтируем</h2>
+        <div class="brends__list list">
+          <a class="brends__item" href="#">
+            <div class="item__wrapper">
+              <div class="img__wrapper">
+                <img src="assets/img/apple.svg" alt="" class="brends__icon">
+              </div>
+              <p class="main-text main-text--small">iPhone</p>
             </div>
-            <p class="main-text brends__name">iPhone</p>
-          </div>
-        </a>
-        <a class="brends__item" href="#">
-          <div class="brends__wrapper">
-            <div class="img__wrapper">
-              <img src="assets/img/xiaomi.svg" alt="" class="brends__icon">
+          </a>
+          <a class="brends__item" href="#">
+            <div class="item__wrapper">
+              <div class="img__wrapper">
+                <img src="assets/img/samsung.svg" alt="" class="brends__icon">
+              </div>
+              <p class="main-text main-text--small">Samsung</p>
             </div>
-            <p class="main-text brends__name">Xiaomi</p>
-          </div>
-        </a>
-        <a class="brends__item" href="#">
-          <div class="brends__wrapper">
-            <div class="img__wrapper">
-              <img src="assets/img/samsung.svg" alt="" class="brends__icon">
+          </a>
+          <a class="brends__item" href="#">
+            <div class="item__wrapper">
+              <div class="img__wrapper">
+                <img src="assets/img/xiaomi.svg" alt="" class="brends__icon">
+              </div>
+              <p class="main-text main-text--small">Xiaomi</p>
             </div>
-            <p class="main-text brends__name">Samsung</p>
-          </div>
-        </a>
-        <a class="brends__item" href="#">
-          <div class="brends__wrapper">
-            <div class="img__wrapper">
-              <img src="assets/img/htc.svg" alt="" class="brends__icon">
+          </a>
+          <a class="brends__item" href="#">
+            <div class="item__wrapper">
+              <div class="img__wrapper">
+                <img src="assets/img/htc.svg" alt="" class="brends__icon">
+              </div>
+              <p class="main-text main-text--small">HTC</p>
             </div>
-            <p class="main-text brends__name">HTC</p>
-          </div>
-        </a>
-        <a class="brends__item lg" href="#">
-          <div class="brends__wrapper">
-            <div class="img__wrapper">
-              <img src="assets/img/lg.svg" alt="" class="brends__icon">
+          </a>
+          <a class="brends__item" href="#">
+            <div class="item__wrapper">
+              <div class="img__wrapper">
+                <img src="assets/img/lg.svg" alt="" class="brends__icon">
+              </div>
+              <p class="main-text main-text--small">LG</p>
             </div>
-            <p class="main-text brends__name">LG</p>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </section>
-    <section class="section services"></section>
-    <section class="section comments"></section>
-    <section class="section about-us"></section>
     <section class="section request" id="request">
       <div class="request__wrapper">
-        <h2 class="request__title">Заявка на ремонт</h2>
+        <h2 class="main-text main-text--big">Заявка на ремонт</h2>
+        <div class="request__form">
+          <div class="form__box">
+            <label>Выберите производителя</label>
+            <select class="form producer" name="producer" action="#" method="POST">
+              <option class="main-text--small" value="iPhone">iPhone</option>
+              <option class="main-text--small" value="Samsung">Samsung</option>
+              <option class="main-text--small" value="Xiaomi">Xiaomi</option>
+              <option class="main-text--small" value="HTC">HTC</option>
+              <option class="main-text--small" value="LG">LG</option>
+            </select>
+          </div>
+          <div class="form__box">
+            <label>Выберите модель</label>
+            <select class="model form" name="model" action="#" method="POST">
+              <option class="main-text--small" value="#">1</option>
+              <option class="main-text--small" value="#">2</option>
+              <option class="main-text--small" value="#">3</option>
+              <option class="main-text--small" value="#">4</option>
+              <option class="main-text--small" value="#">5</option>
+            </select>
+          </div>
+          <div class="form__box">
+            <label>Выберите вид работ</label>
+            <select class="service form" name="service" action="#" method="POST">
+              <option class="main-text--small" value="display">Замена экрана</option>
+              <option class="main-text--small" value="body">Замена корпуса</option>
+              <option class="main-text--small" value="screen">Замена экрана</option>
+            </select>
+          </div>
+          <div class="label__request name required">
+            <label for="name">Ваше имя</label>
+            <input id="name" type="text" name="name" required>
+          </div>
+          <div class="label__request phone-number required">
+            <label for="phone-number">Ваш номер телефона</label>
+            <input id="phone-number" type="tel" name="phone-number" required>
+          </div>
+          <div class="label__request problem-description">
+            <label for="problem-description">Опишите проблему</label>
+            <textarea id="problem-description" name="comments" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="ggg">
+          <input id="color-check" type="checkbox">
+          <label class="toggle-item" for="color-check"></label>
+          <p class="main-text main-text--small conditions">Я согласен с <a class="main-text main-text--small conditions__doc" href="#">условиями ремонта</a></p>
+        </div>
+        <button class="btn btn--request"><a href="#">Оставить заявку</a></button>
       </div>
     </section>
+    <section class="section comments">
+      <div class="comments__wrapper">
+        <h2 class="main-text main-text--big">Что говорят наши клиенты</h2>
+        <button class="btn btn--comments"><a href="comments.html">Показать отзывы</a></button>
+      </div>
+    </section>
+    <section class="section contacts">
+      <div class="contacts__wrapper">
+        <h2 class="main-text main-text--big">Связаться с нами</h2>
+        <div class="contacts__info">
+          <a class="main-text services__name" href="tel:+375291234567">+375(29)1234567 A1</a>
+          <p class="main-text services__name">Работаем без выходных<br>с 9:00 до 22:00</p>
+          <a class="main-text services__name" href="mailto:smartfix@gmail.com" class="main-text">smartfix@gmail.com</a>
+          <p class="main-text services__name">ТЦ Московско-Венский, пр-т Независимости, 58, эт.&nbsp;3, пав.&nbsp;111</p>
+        </div>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.7821523266925!2d27.587218448294088!3d53.917846954872836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfa6efdaaaab%3A0xcbc95854c0225e6b!2sMoskovsko-Venskii%20Torgovyi%20Centr%20Tovarischestva%20Sobstvennikov%20Vsegda%20Vmeste!5e0!3m2!1sen!2sby!4v1624885175771!5m2!1sen!2sby" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
   </main>
-  <footer class="footer">
-
+  <footer class="section footer">
+    <div class="footer__wrapper">
+      <div class="menu menu--open"> <!-- обертка=меню -->
+        <ul class="footer__menu menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link footer__contacts">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link footer__contacts">Устройства</a>
+          </li>
+          <li class="menu__item">
+            <a href="comments.html" class="menu__link footer__contacts">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link footer__contacts">Связаться с нами</a>
+          </li>
+        </ul>
+      </div>
+      <p class="copyright main-text main-text--small">© 2021 smartfix.by</p>
+    </div>
   </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
