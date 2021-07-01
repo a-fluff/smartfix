@@ -573,6 +573,7 @@ option, textarea {
 .contacts {
   padding-top: 45px;
   padding-bottom: 45px;
+  background-color: #ffffff;
 }
 .contacts__info * {
   font-size: 19px;
@@ -726,7 +727,7 @@ option, textarea {
 }
 
 .rating {
-  width: 151px;
+  width: 70%;
   margin: 0 auto;
   margin-bottom: 15px;
 }
