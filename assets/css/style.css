@@ -364,6 +364,10 @@ a:focus {
   font-size: 18px;
 }
 
+.tel:hover, .mail:hover {
+  font-weight: 500;
+}
+
 .flip {
   position: relative;
   perspective: 500px;
