@@ -23,130 +23,160 @@
     </div>
   </div>
   <header class="header">
-    <div class="wrapper">
-      <div class="logo">
-        <div class="icon__wrapper">
-          <img class="logo__icon" src="assets/img/white-smartphone.svg" alt="">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="wrapper">
+          <div class="logo">
+            <div class="icon__wrapper">
+              <img class="logo__icon" src="assets/img/white-smartphone.svg" alt="">
+            </div>
+            <p class="logo__text">Smartfix</p>
+          </div>
+          <nav class="menu menu--open"> <!-- обертка=меню -->
+            <ul class="header__menu menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Услуги</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Устройства</a>
+              </li>
+              <li class="menu__item">
+                <a href="comments.html" class="menu__link">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Связаться с нами</a>
+              </li>
+            </ul>
+          </nav>
+          <img class="burger-box" src="assets/img/menu.svg" alt="">
         </div>
-        <p class="logo__text">Smartfix</p>
-      </div>
-      <nav class="men-u menu--open"> <!-- обертка=меню -->
-        <ul class="header__menu menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link">Услуги</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Устройства</a>
-          </li>
-          <li class="menu__item">
-            <a href="comments.html" class="menu__link">Отзывы</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Связаться с нами</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="burger-box">
-        <img class="burger-box--closed" src="assets/img/white-menu.svg" alt="">
       </div>
     </div>
   </header>
   <main class="main">
     <div class="container">
       <section class="section reviews reviews--comments">
-        <div class="reviews__wrapper">
-          <h2 class="main-text main-text--big">Отзывы наших клиентов</h2>
-          <div class="slider">
-            <div class="slider__container">
-              <div class="slider__wrapper">
-                <div class="slider__list">
-                  <div class="slider__item">
-                    <div class="rating">
-                      <input type="radio" id="star-5" name="rating" value="5">
-                      <label for="star-5"></label>	
-                      <input type="radio" id="star-4" name="rating" value="4">
-                      <label for="star-4"></label>    
-                      <input type="radio" id="star-3" name="rating" value="3">
-                      <label for="star-3"></label>  
-                      <input type="radio" id="star-2" name="rating" value="2">
-                      <label for="star-2"></label>    
-                      <input type="radio" id="star-1" name="rating" value="1">
-                      <label for="star-1"></label>
-                    </div>
-                    <div class="customer__info">
-                      <div class="customer__img">
-                        <a class="net-icon" href="#">
-                          <img src="assets/img/vk-logo.svg" alt="">
-                        </a>
+        <div class="wrapper">
+          <div class="reviews__wrapper">
+            <h2 class="main-text main-text--big">Отзывы наших клиентов</h2>
+            <div class="slider">
+              <div class="slider__container">
+                <div class="slider__wrapper">
+                  <div class="slider__list">
+                    <div class="slider__item">
+                      <div class="rating">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5"></label>	
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4"></label>    
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3"></label>  
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2"></label>    
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1"></label>
                       </div>
-                      <p class="main-text main-text--small customer__name">Екатерина</p>
-                    </div>
-                    <p class="main-text main-text--small review-date">05.02.2021</p>
-                    <p class="main-text main-text--small customer__review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, cum. Quasi nulla rem, omnis magnam, veniam eius eum maiores voluptatibus quidem velit cumque? Pariatur quis, aliquam eum dicta quibusdam commodi?</p>
-                    <div class="spoiler">
-                      <div class="spoiler-buttonr">
-  
+                      <div class="customer__info">
+                        <div class="customer__img">
+                          <a class="net-icon" href="#">
+                            <img src="assets/img/vk-logo.svg" alt="">
+                          </a>
+                        </div>
+                        <p class="main-text main-text--small customer__name">Екатерина</p>
+                      </div>
+                      <p class="main-text main-text--small review-date">05.02.2021</p>
+                      <p class="main-text main-text--small customer__review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, cum. Quasi nulla rem, omnis magnam, veniam eius eum maiores voluptatibus quidem velit cumque? Pariatur quis, aliquam eum dicta quibusdam commodi?</p>
+                      <div class="spoiler">
+                        <div class="spoiler-buttonr">
+    
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- <div class="slider__item">
-                  </div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                  <div class="slider__item"></div>
-                </div> -->
+                    <!-- <div class="slider__item">
+                    </div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                    <div class="slider__item"></div>
+                  </div> -->
+                </div>
+                <a class="slider__control previous" href="#"></a>
+                <a class="slider__control next" href="#"></a>
+                <ol class="slider__indicators">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ol>
               </div>
-              <a class="slider__control previous" href="#"></a>
-              <a class="slider__control next" href="#"></a>
-              <ol class="slider__indicators">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ol>
             </div>
           </div>
         </div>
       </section>
-      <section class="section contacts contacts--comments">
-        <div class="contacts__wrapper">
+      <section class="section contacts">
+        <div class="wrapper">
           <h2 class="main-text main-text--big">Связаться с нами</h2>
-          <div class="contacts__info">
-            <a class="main-text services__name tel" href="tel:+375291234567">+375(29)1234567 A1</a>
-            <p class="main-text services__name">Работаем без выходных<br>с 9:00 до 22:00</p>
-            <a class="main-text services__name mail" href="mailto:smartfix@gmail.com">smartfix@gmail.com</a>
-            <p class="main-text services__name">ТЦ Московско-Венский, пр-т Независимости, 58, эт.&nbsp;3, пав.&nbsp;111</p>
+          <div class="contacts__wrapper">
+            <div class="contacts__info">
+              <a class="main-text tel" href="tel:+375291234567">+375(29)1234567 A1</a>
+              <a class="main-text mail" href="mailto:smartfix@gmail.com">smartfix@gmail.com</a>
+              <p class="main-text">Работаем без выходных<br>с 9:00 до 22:00</p>
+              <p class="main-text">ТЦ Московско-Венский, пр-т Независимости, 58, эт.&nbsp;3, пав.&nbsp;111</p>
+            </div>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.7821523266925!2d27.587218448294088!3d53.917846954872836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfa6efdaaaab%3A0xcbc95854c0225e6b!2sMoskovsko-Venskii%20Torgovyi%20Centr%20Tovarischestva%20Sobstvennikov%20Vsegda%20Vmeste!5e0!3m2!1sen!2sby!4v1624885175771!5m2!1sen!2sby" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
-          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.7821523266925!2d27.587218448294088!3d53.917846954872836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfa6efdaaaab%3A0xcbc95854c0225e6b!2sMoskovsko-Venskii%20Torgovyi%20Centr%20Tovarischestva%20Sobstvennikov%20Vsegda%20Vmeste!5e0!3m2!1sen!2sby!4v1624885175771!5m2!1sen!2sby" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
     </div>
   </main>
   <footer class="section footer">
     <div class="container">
-      <div class="menu menu--open"> <!-- обертка=меню -->
-        <ul class="footer__menu menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link footer__contacts">Услуги</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link footer__contacts">Устройства</a>
-          </li>
-          <li class="menu__item">
-            <a href="comments.html" class="menu__link footer__contacts">Отзывы</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link footer__contacts">Связаться с нами</a>
-          </li>
-        </ul>
+      <div class="wrapper">
+        <div class="menu menu--open"> <!-- обертка=меню -->
+          <ul class="footer__menu menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link footer__contacts">Услуги</a>
+              <div class="menu-expanded">
+                <a class="main-text main-text--small" href="#">Замена экрана</a>
+                <a class="main-text main-text--small" href="#">Замена динамика</a>
+                <a class="main-text main-text--small" href="#">Замена корпуса</a>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link footer__contacts">Устройства</a>
+              <div class="menu-expanded">
+                <a class="main-text main-text--small" href="#">iPhone</a>
+                <a class="main-text main-text--small" href="#">Samsung</a>
+                <a class="main-text main-text--small" href="#">Xiaomi</a>
+                <a class="main-text main-text--small" href="#">HTC</a>
+                <a class="main-text main-text--small" href="#">LG</a>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a href="comments.html" class="menu__link footer__contacts">Отзывы</a>
+              <div class="menu-expanded">
+                <a class="main-text main-text--small"href="comments.html">2021</a>
+                <a class="main-text main-text--small"href="comments.html">2020</a>
+                <a class="main-text main-text--small"href="comments.html">2019</a>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link footer__contacts">Связаться с нами</a>
+              <div class="menu-expanded">
+                <a class="main-text main-text--small" href="tel:+375291234567">+375(29)1234567</a>
+                <a class="main-text main-text--small" href="mailto:smartfix@gmail.com">smartfix@gmail.com</a>
+                <a class="main-text main-text--small" href="https://goo.gl/maps/9uBG6E5hcBMedLnr9">ТЦ Московско-Венский, пр-т Независимости, 58, эт.&nbsp;3, пав.&nbsp;111</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <p class="copyright main-text main-text--small">© 2021 smartfix.by</p>
       </div>
-      <p class="copyright main-text main-text--small">© 2021 smartfix.by</p>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
