@@ -8,10 +8,15 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #c49b8467;
+  display: flex;
+  flex-direction: column;
 }
 
 header, main, footer {
   min-width: 320px;
+}
+footer {
+  flex: 0 0 auto;
 }
 
 h2 {
@@ -485,7 +490,7 @@ textarea {
 .form, .label__request input, textarea {
   border: 1px solid #00000065;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .required:focus {
@@ -558,7 +563,7 @@ textarea {
   height: 50px;
   border: none;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.356);
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.15);
   padding-left: 32px;
   margin: 0 auto;
