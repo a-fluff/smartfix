@@ -16,6 +16,8 @@ header, main, footer {
   min-width: 320px;
 }
 footer {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 auto !important;
 }
 
@@ -1325,6 +1327,11 @@ textarea {
   .menu-expanded a::before {
     width: 18.4px;
     height: 18.4px;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .first-screen {
+    height: auto;
   }
 }
 
