@@ -1,15 +1,16 @@
-var menu = document.querySelector('.menu');
-var open = false;
+// var menu = document.querySelector('.menu');
+// var open = false;
 
-document.querySelector('.burger-box').onclick = function(){
-    if(open){
-        menu.classList.remove('menu--open');
-    }else{
-        menu.classList.add('menu--open');
-    }
 
-    open = !open;
-};
+// document.querySelector('.burger-box').onclick = function(){
+//     if(open){
+//         menu.classList.remove('menu--open');
+//     }else{
+//         menu.classList.add('menu--open');
+//     }
+
+//     open = !open;
+// };
 
 // var burgerBox = document.querySelector('.burger-box--closed');
 // var menu = document.getElementsByClassName('.menu');
@@ -30,5 +31,44 @@ window.onload = function () {
     window.setTimeout(function () {
       document.body.classList.add('loaded');
       document.body.classList.remove('loaded_hiding');
-    }, 4000);
+    },500);
 }
+
+// $(document).ready(function() {
+//     let position = 0;
+//     const slidesToShow = 3;
+//     const slidesToScroll = 2;
+//     const container = $('.slider__container');
+//     const track = $('.slider__list');
+//     const item = $('.slider__item');
+//     const btnPrev = $('.previous');
+//     const btnNext = $('.next');
+//     const itemWidth = container.wisth() / slidesToShow;
+
+//     item.each(function (index, item) {
+//         $(item).css({
+//             minWidth: itemWidth,
+//         });
+//     });
+// });
+
+
+
+$(document).ready(function () {
+	$(".icons").slick({
+		//Basic settings
+		autoplay: true,
+		autoplaySpeed: 400000,
+		arrows: true,
+		swipeToSlide: true,
+		touchMove: true,
+		ltr: true,
+		infinite: true,
+		variableWidth: true,
+		dots: false,
+		pauseOnHover: false
+	});
+});
+
+
+
