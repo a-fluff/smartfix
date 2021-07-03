@@ -1322,9 +1322,9 @@ textarea {
     height: 18.4px;
   }
 }
-@media screen and (min-height: 900px) {
+@media (min-height: 900px) and (max-width: 530px) {
   .first-screen {
-    height: 900px;
+    height: 100px;
   }
 }
 
