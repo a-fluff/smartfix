@@ -410,6 +410,9 @@ a:focus {
   height: 155px;
   display: flex;
   flex-grow: 1;
+
+  border: transparent;
+  border-radius: 10px;
 }
 
 .brends__item:nth-child(2n) {
@@ -419,6 +422,7 @@ a:focus {
 
 .brends__item:hover {
   background-color: #c49b8467;
+  /* border: 0.1px solid #c49b8467;  */
 }
 
 .item__wrapper {
