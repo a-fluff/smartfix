@@ -950,35 +950,28 @@ textarea {
     display: none;
   }
   .prices {
-    width: max-content;
+    width: min-content;
     height: auto;
     text-align: center;
     position: absolute;
-    top: 27px;
+    top: 3px;
+    left: 13.5px;
     /* left: 997px; */
-    left: 390px;
+    /* left: 390px; */
     display: block;
     border-radius: 0%;
-    transform: rotateY(0deg);
-    transition: none;
+    /* transform: rotateY(0deg); */
+    /* transition: none; */
     background: none;
+    font-size: 14px;
     
-    display: none; /*!.*/
-  }
-  .prices::before {
-    content: '';
-    width: 1px;
-    height: 40px;
-    position: absolute;
-    top: -12px;
-    left: -20px;
-    background-color: #000000;
-    border-radius: 1px;
+    /* display: none;  */
   }
   .flip {
-    pointer-events: none;
+    /* pointer-events: none; */
     display: flex;
     flex-direction: row;
+    backface-visibility: hidden;
   }
   .services__icon {
     height: 50px;
