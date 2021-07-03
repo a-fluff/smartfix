@@ -16,7 +16,7 @@ header, main, footer {
   min-width: 320px;
 }
 footer {
-  flex: 0 0 auto;
+  flex: 0 0 auto !important;
 }
 
 h2 {
@@ -490,7 +490,7 @@ textarea {
 .form, .label__request input, textarea {
   border: 1px solid #00000065;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .required:focus {
