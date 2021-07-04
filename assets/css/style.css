@@ -410,7 +410,6 @@ a:focus {
   height: 155px;
   display: flex;
   flex-grow: 1;
-
   border: transparent;
   border-radius: 10px;
 }
@@ -422,7 +421,6 @@ a:focus {
 
 .brends__item:hover {
   background-color: #c49b8467;
-  /* border: 0.1px solid #c49b8467;  */
 }
 
 .item__wrapper {
@@ -449,8 +447,6 @@ a:focus {
 .brends__icon {
   width: 85px;
 }
-
-
 
 .request__form {
   height: 510px;
@@ -489,7 +485,7 @@ textarea {
 .form, .label__request input, textarea {
   border: 1px solid #00000065;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .required:focus {
@@ -663,9 +659,6 @@ textarea {
 
 .reviews {
   padding: 122px 25px 45px;
-}
-
-.reviews--comments {
   background: none !important;
 }
 
@@ -770,49 +763,49 @@ textarea {
 .customer__img {
   position: relative;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 .img-1 {
   background: url("../img/customers/woman-1.jpg") no-repeat;
-  background-position: 50% 14%;
-  background-size: 200px auto;
+  background-position: 50% 10%;
+  background-size: 270px auto;
 }
 
 .img-2 {  
   background: url("../img/customers/man-1.jpg") no-repeat;
-  background-position: 27% 7%;
-  background-size: 95px auto;
+  background-size: 200px auto;
 }
 
 .img-3 {  
   background: url("../img/customers/woman-2.jpg") no-repeat;
-  background-position: 0% 0%;
-  background-size: 80px auto;
+  background-position: -10px 0%;
+  background-size: 210px auto;
 }
 
 .img-4 {  
   background: url("../img/customers/man-2.jpg") no-repeat;
-  background-position: 45% 35%;
-  background-size: 105px auto;
+  background-position: 0 37%;
+  background-size: 210px auto;
 }
 
 .img-5 { 
   background: url("../img/customers/woman-3.jpg") no-repeat;
-  background-position: 63% 0%;
-  background-size: 100px auto;
+  background-position: 67% 0%;
+  background-size: 240px auto;
 }
 
 .img-6 {  
   background: url("../img/customers/man-3.jpg") no-repeat;
-  background-position: 35% 17%;
-  background-size: 118px auto;
+  background-position: 0px 15%;
+  background-size: 220px auto;
 }
 
 .customer__info {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 15px;
 }
@@ -825,12 +818,12 @@ textarea {
 
 .net-icon {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 144px;
+  left: 144px;
 }
 
 .net-icon img {
-  width: 30px;
+  width: 50px;
   border-radius: 50%;
 }
 
@@ -1204,8 +1197,16 @@ textarea {
   .leave-request .btn--dark {
     right: 17.5%;
   }
+  .customer__review {
+    font-size: 17px;
+  }
 }
 
+@media screen and (min-width: 1000px) {
+  .customer__review {
+    font-size: 16px;
+  }
+}
 
 @media screen and (min-width: 1100px) {
   .title {
@@ -1369,4 +1370,56 @@ textarea {
   50% {
     transform: scale(1.7);
   }
+}
+
+
+
+.rating__container .rating {
+  display: block;
+  margin: 0;
+}
+
+.add-text{
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+#check-review {
+  display: none;
+}
+
+.add-btn {
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/add-btn.svg');
+  background-size: cover;
+  background-position: 50% 50%;
+  border: none;
+  background-color: transparent;
+  border-radius: 30px;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.review__container {
+  border: 1px solid #00000065;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.15);
+  background-color: #c49b8467;
+  padding: 20px;
+  margin-top: 35px;
+  display: none;
+}
+
+#check-review:checked ~ .review__container {
+  display: block;
+}
+
+.review__form {
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
