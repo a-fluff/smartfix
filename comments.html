@@ -36,16 +36,16 @@
           <nav class="menu menu--open"> <!-- обертка=меню -->
             <ul class="header__menu menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Услуги</a>
+                <a href="https://a-fluff.github.io/smartfix/index.html#services" class="menu__link">Услуги</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Устройства</a>
+                <a href="https://a-fluff.github.io/smartfix/index.html#brends" class="menu__link">Устройства</a>
               </li>
               <li class="menu__item">
-                <a href="comments.html" class="menu__link">Отзывы</a>
+                <a href="#reviews" class="menu__link">Отзывы</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Связаться с нами</a>
+                <a href="#contacts" class="menu__link">Связаться с нами</a>
               </li>
             </ul>
           </nav>
@@ -56,7 +56,7 @@
   </header>
   <main class="main">
     <div class="container">
-      <section class="section reviews reviews--comments">
+      <section class="section reviews" id="reviews">
         <div class="wrapper">
           <div class="reviews__wrapper">
             <h2 class="main-text main-text--big">Отзывы наших клиентов</h2>
@@ -164,7 +164,6 @@
                   <p class="main-text main-text--small review-date">17.10.2020</p>
                   <p class="main-text main-text--small customer__review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, cum. Quasi nulla rem, omnis magnam, veniam eius eum maiores voluptatibus quidem velit cumque? Pariatur quis, aliquam eum dicta quibusdam commodi?</p>
                 </div>
-              
               </div>
               <div class="slider__item">
                 <div class="slider__item--5">
@@ -217,7 +216,6 @@
                   <p class="main-text main-text--small review-date">21.05.2021</p>
                   <p class="main-text main-text--small customer__review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, cum. Quasi nulla rem, omnis magnam, veniam eius eum maiores voluptatibus quidem velit cumque? Pariatur quis, aliquam eum dicta quibusdam commodi?</p>
                 </div>
-              
               </div>
             </div>
           </div>
@@ -226,6 +224,41 @@
       <section class="section leave-review">
         <div class="wrapper">
           <h2 class="main-text main-text--big">Оставить отзыв</h2>
+          <input id="check-review" type="checkbox">
+          <label class="add-btn" for="check-review"></label>
+          <div class="review__container">
+            <form class="review__form" action="" method="POST">
+              <div class="rating__container">
+                <p class="main-text main-text--small add-text">Оценка</p>
+                <div class="rating">
+                  <input type="radio" id="star-5" name="rating" value="5">
+                  <label for="star-5"></label>	
+                  <input type="radio" id="star-4" name="rating" value="4">
+                  <label for="star-4"></label>    
+                  <input type="radio" id="star-3" name="rating" value="3">
+                  <label for="star-3"></label>  
+                  <input type="radio" id="star-2" name="rating" value="2">
+                  <label for="star-2"></label>    
+                  <input type="radio" id="star-1" name="rating" value="1">
+                  <label for="star-1"></label>
+                </div>
+              </div>
+              <div class="label__request name">
+                <label for="name">Имя</label>
+                <input id="name" class="required" type="text" name="name" required>
+              </div>
+              <div class="label__request problem-description">
+                <label for="review-description">Отзыв</label>
+                <textarea id="review__description" class="required" name="review__description" cols="30" rows="5"></textarea>
+              </div>
+              <button class="add-photo">Добавить фото</button>
+              <div class="label__request net__link">
+                <label for="net__link">Ссылка на профиль в соцсети</label>
+                <input id="net__link" type="text" name="net__link" required>
+              </div>
+            </form>
+            <button class="btn btn--light" onclick="location.href='#'">Добавить отзыв</button>
+          </div>
         </div>
       </section>
       <section class="section contacts">
@@ -240,6 +273,7 @@
             </div>
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.7821523266925!2d27.587218448294088!3d53.917846954872836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfa6efdaaaab%3A0xcbc95854c0225e6b!2sMoskovsko-Venskii%20Torgovyi%20Centr%20Tovarischestva%20Sobstvennikov%20Vsegda%20Vmeste!5e0!3m2!1sen!2sby!4v1624885175771!5m2!1sen!2sby" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
+        </div>
       </section>
     </div>
   </main>
@@ -249,7 +283,7 @@
         <div class="menu menu--open"> <!-- обертка=меню -->
           <ul class="footer__menu menu__list">
             <li class="menu__item">
-              <a href="#" class="menu__link footer__contacts">Услуги</a>
+              <a href="https://a-fluff.github.io/smartfix/index.html#services" class="menu__link footer__contacts">Услуги</a>
               <div class="menu-expanded">
                 <a class="main-text main-text--small" href="#">Замена экрана</a>
                 <a class="main-text main-text--small" href="#">Замена динамика</a>
@@ -257,7 +291,7 @@
               </div>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link footer__contacts">Устройства</a>
+              <a href="https://a-fluff.github.io/smartfix/index.html#brends" class="menu__link footer__contacts">Устройства</a>
               <div class="menu-expanded">
                 <a class="main-text main-text--small" href="#">iPhone</a>
                 <a class="main-text main-text--small" href="#">Samsung</a>
@@ -267,7 +301,7 @@
               </div>
             </li>
             <li class="menu__item">
-              <a href="comments.html" class="menu__link footer__contacts">Отзывы</a>
+              <a href="#reviews" class="menu__link footer__contacts">Отзывы</a>
               <div class="menu-expanded">
                 <a class="main-text main-text--small"href="comments.html">2021</a>
                 <a class="main-text main-text--small"href="comments.html">2020</a>
@@ -275,7 +309,7 @@
               </div>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link footer__contacts">Связаться с нами</a>
+              <a href="#contacts" class="menu__link footer__contacts">Связаться с нами</a>
               <div class="menu-expanded">
                 <a class="main-text main-text--small" href="tel:+375291234567">+375(29)1234567</a>
                 <a class="main-text main-text--small" href="mailto:smartfix@gmail.com">smartfix@gmail.com</a>
