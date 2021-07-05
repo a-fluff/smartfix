@@ -752,14 +752,14 @@ textarea {
   text-shadow: 1px 1px goldenrod;
 }
 
-/* .rating__container .rating > input:checked + label:hover,
+.rating__container .rating > input:checked + label:hover,
 .rating__container .rating > input:checked + label:hover ~ label,
 .rating__container .rating > input:checked ~ label:hover,
 .rating__container .rating > input:checked ~ label:hover ~ label,
 .rating__container .rating > label:hover ~ input:checked ~ label {
   color: gold;
   text-shadow: 1px 1px #c60;
-} */
+}
 
 .customer__img {
   position: relative;
