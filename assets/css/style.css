@@ -340,8 +340,15 @@ a:focus {
   font-size: 22px;
   padding: 10px;
   z-index: 991;
+  border: 2px solid transparent;
 }
-
+.header__menu .menu__item:hover {
+  border-bottom-color: #c49b84;
+}
+.header__menu .menu__item:hover > .menu__link {
+  border-bottom-color: #c49b84;
+  color: #c49b84;
+}
 .menu__link {
   color: #ffffff;
 }
