@@ -225,7 +225,9 @@
         <div class="wrapper">
           <h2 class="main-text main-text--big">Оставить отзыв</h2>
           <input id="check-review" type="checkbox">
-          <label class="add-btn" for="check-review"></label>
+          <label class="add-btn" for="check-review">
+            <div class="check"></div>
+          </label>
           <div class="review__container">
             <form class="review__form" action="" method="POST">
               <div class="rating__container">
@@ -244,24 +246,35 @@
                 </div>
               </div>
               <div class="label__request name">
-                <label for="name">Имя</label>
-                <input id="name" class="required" type="text" name="name" required>
+                <label for="customer__name">Имя</label>
+                <input id="customer__name" class="required" type="text" name="customer__name" required>
               </div>
-              <div class="label__request problem-description">
+              <div class="label__request review-description">
                 <label for="review-description">Отзыв</label>
                 <textarea id="review__description" class="required" name="review__description" cols="30" rows="5"></textarea>
               </div>
-              <button class="add-photo">Добавить фото</button>
               <div class="label__request net__link">
-                <label for="net__link">Ссылка на профиль в соцсети</label>
+                <label for="net__link">Ссылка на соцсеть</label>
                 <input id="net__link" type="text" name="net__link" required>
               </div>
+              <div class="label__request input__wrapper">
+                <p class="main-text main-text--small add-text add-text--input">Добавить фото</p>
+                <label for="input__file" class="input__file--add">
+                  Добавить фото
+                  <img class="upload-icon" src="assets/img/upload.svg" alt="">
+                </label>
+                <label for="input__file" class="input__file--choose">
+                  Выберите файл
+                  <img class="upload-icon" src="assets/img/upload.svg" alt="">
+                </label>
+                <input class="input__file" id="input__file" type="file" name="photo" accept="image/*">
+              </div>
             </form>
-            <button class="btn btn--light" onclick="location.href='#'">Добавить отзыв</button>
+            <button class="btn btn--light" onclick="location.href='#'">Отправить отзыв</button>
           </div>
         </div>
       </section>
-      <section class="section contacts">
+      <section class="section contacts" id="contacts">
         <div class="wrapper">
           <h2 class="main-text main-text--big">Связаться с нами</h2>
           <div class="contacts__wrapper">
