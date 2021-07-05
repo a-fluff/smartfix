@@ -8,6 +8,17 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #c49b8467;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header, footer {
+  flex: 0 0 auto;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 header, main, footer {
@@ -738,16 +749,17 @@ textarea {
 .rating__container .rating:not(:checked) > label:hover,
 .rating__container .rating:not(:checked) > label:hover ~ label {
   color: gold;
+  text-shadow: 1px 1px goldenrod;
 }
 
-.rating__container .rating > input:checked + label:hover,
+/* .rating__container .rating > input:checked + label:hover,
 .rating__container .rating > input:checked + label:hover ~ label,
 .rating__container .rating > input:checked ~ label:hover,
 .rating__container .rating > input:checked ~ label:hover ~ label,
 .rating__container .rating > label:hover ~ input:checked ~ label {
   color: gold;
-  text-shadow: 1px 1px goldenrod;
-}
+  text-shadow: 1px 1px #c60;
+} */
 
 .customer__img {
   position: relative;
