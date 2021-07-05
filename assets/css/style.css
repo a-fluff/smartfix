@@ -482,7 +482,7 @@ textarea {
   margin-bottom: 6px;
 }
 
-.form, .label__request input, textarea {
+.form, .label__request input, textarea  {
   border: 1px solid #00000065;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -584,7 +584,7 @@ textarea {
   margin-bottom: 0;
 }
 
-.tel:hover, .mail:hover {
+.tel:hover, .mail:hover, .input__wrapper label:hover {
   font-weight: 500;
 }
 
@@ -709,56 +709,45 @@ textarea {
   text-shadow: 1px 1px #c60;
 }
 
-.rating--4 label:last-child {
+.rating--4 label:nth-child(10n-8) {
   color: lightgrey;
   text-shadow: 1px 1px #bbb;
 }
 
-.rating--3 label:nth-child(8n) {
+.rating--3 label:nth-child(10n-6) {
   color: lightgrey;
   text-shadow: 1px 1px #bbb;
 }
 
-/* .rating:not(:checked) > input {
-  display: none;
-}
-
-.rating:not(:checked) > label {
+.rating__container .rating label {
   width: 33px;
   padding: 0;
   cursor: pointer;
   font-size: 32px;
   line-height: 32px;
-  color: gold;
-  text-shadow: 1px 1px #bbb;
+  color: rgb(165, 164, 164);
+  text-shadow: 1px 1px rgb(107, 107, 107);
 }
 
-.rating:not(:checked) > label:before {
-  content: "★";
-} */
 
-/* .rating > input:checked ~ label {
+.rating__container .rating > input:checked ~ label {
   color: gold;
   text-shadow: 1px 1px #c60;
-} */
+}
 
-/* .rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
+.rating__container .rating:not(:checked) > label:hover,
+.rating__container .rating:not(:checked) > label:hover ~ label {
   color: gold;
-} */
+}
 
-/* .rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
+.rating__container .rating > input:checked + label:hover,
+.rating__container .rating > input:checked + label:hover ~ label,
+.rating__container .rating > input:checked ~ label:hover,
+.rating__container .rating > input:checked ~ label:hover ~ label,
+.rating__container .rating > label:hover ~ input:checked ~ label {
   color: gold;
   text-shadow: 1px 1px goldenrod;
-} */
-
-/* .rate-area > label:active {
-  position: relative;
-} */
+}
 
 .customer__img {
   position: relative;
@@ -1131,6 +1120,47 @@ textarea {
   .copyright {
     text-align: center;
   }
+
+
+  .review__form {
+    height: 310px !important;
+  }
+  .rating__container, .review__form .label__request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .review-description {
+    align-items: flex-start;
+  }
+  .add-text, .form__container label, .label__request label {
+    margin-bottom: 0 !important;
+  }
+  #customer__name, #review__description, #net__link, .rating__container .rating {
+    width: 60%;
+  }
+  .add-text {
+    font-size: 15px;
+  }
+  .add-text--input {
+    display: inline-block !important;
+  }
+  .input__wrapper label {
+    width: 60%;
+    height: 40px;
+    margin: 0 auto;
+    margin-right: 0;
+    border: 1px solid #00000065;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+  }
+  .input__file--add {
+    display: none !important;
+  }
+  .input__file--choose {
+    display: inline-flex !important;
+  }
 }
 
 @media screen and (min-width: 765px) {
@@ -1217,6 +1247,9 @@ textarea {
   }
   .review-date {
     font-size: 15px;
+  }  
+  .input__wrapper label {
+    font-size: 14px;
   }
 }
 
@@ -1319,6 +1352,12 @@ textarea {
     width: 18.4px;
     height: 18.4px;
   }
+  .add-text {
+    font-size: 20px;
+  }
+  .input__wrapper label {
+    font-size: 15px;
+  }
 }
 @media (min-height: 900px) and (max-width: 530px) {
   .first-screen {
@@ -1377,6 +1416,7 @@ textarea {
 .rating__container .rating {
   display: block;
   margin: 0;
+  justify-content: flex-start;
 }
 
 .add-text{
@@ -1384,32 +1424,89 @@ textarea {
   margin-bottom: 6px;
 }
 
+.input__wrapper label {
+  margin-bottom: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__wrapper .input__file--choose:hover {
+  box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 15%);
+}
+
+.input__wrapper .input__file--choose {
+  display: none;
+}
+
+.add-text--input {
+  display: none;
+}
+
+.upload-icon {
+  width: 20px;
+  margin-left: 10px;
+}
+.input__file {
+  display: none;
+}
+
+
+
+
 #check-review {
   display: none;
 }
 
 .add-btn {
+  display: block;
   width: 60px;
   height: 60px;
-  background-image: url('../img/add-btn.svg');
-  background-size: cover;
-  background-position: 50% 50%;
-  border: none;
-  background-color: transparent;
-  border-radius: 30px;
-  display: block;
-  padding: 0;
-  margin: 0 auto;
+  background: #c49b84;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s;
   cursor: pointer;
+  margin: 0 auto;
+}
+
+.check:before, .check:after {
+  content: "";
+  width: 35px;
+  height: 5px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  transition: 0.25s ease;
+  position: absolute;  
+}
+
+.check:before {
+  transform: rotate(90deg) translate(27px, -12px);
+}
+
+.check:after {
+  transform: rotate(180deg) translate(-12px, -27px);
+}
+
+#check-review:checked ~ label .check:after {
+  transform: rotate(45deg) translate(28px, 11px)
+}
+
+#check-review:checked ~ label .check:before {
+  transform: rotate(-45deg) translate(-11px, 28px);
 }
 
 .review__container {
+  max-width: 80%;
+  min-width: 270px;
   border: 1px solid #00000065;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.15);
   background-color: #c49b8467;
   padding: 20px;
-  margin-top: 35px;
+  margin: 0 auto;
+  margin-top: 25px;
   display: none;
 }
 
@@ -1418,7 +1515,7 @@ textarea {
 }
 
 .review__form {
-  height: 370px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
