@@ -338,7 +338,7 @@ a:focus {
 }
 
 .first-screen {
-  height: 100vh;
+  /* height: 100vh; */
   background: url("../img/bc-first-screen.jpeg") no-repeat;
   background-size: cover;
   background-position: 72.5%;
