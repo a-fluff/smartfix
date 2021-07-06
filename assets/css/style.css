@@ -333,6 +333,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 60px 25px;
+  margin-top: 74px;
 }
 
 .header__menu .menu__item {
@@ -342,12 +343,11 @@ a:focus {
   z-index: 991;
   border: 2px solid transparent;
 }
+
 .header__menu .menu__item:hover {
   border-bottom-color: #ffffff;
 }
-/* .header__menu .menu__item:hover > .menu__link {
-  color: #000000;
-} */
+
 .menu__link {
   color: #ffffff;
 }
