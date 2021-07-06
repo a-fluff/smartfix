@@ -332,8 +332,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 60px 25px;
-  margin-top: 74px;
+  margin-top: 54px;
 }
 
 .header__menu .menu__item {
