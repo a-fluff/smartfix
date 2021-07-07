@@ -19,7 +19,7 @@ body {
   min-height: calc(var(--vh, 1vh) * 100);
 }
 
-footer {
+header, footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -141,7 +141,7 @@ a:focus {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  margin-top: calc(50vh - 50px);
+  margin-top: calc(calc(var(--vh, 1vh) * 50) - 50px);
   position: relative;
   -webkit-animation: dot 4s infinite linear;
           animation: dot 4s infinite linear;
@@ -709,9 +709,9 @@ textarea {
   border: 0.5px solid rgba(94, 91, 91, 0.2);
   border-radius: 50px;
   position: relative;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -724,9 +724,9 @@ textarea {
   position: absolute;
   top: 4.5px;
   left: 4.5px;
-  -webkit-transition: 0.4s ease;
-  -o-transition: 0.4s ease;
-  transition: 0.4s ease;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #color-check:checked ~ .toggle-item {
@@ -837,9 +837,6 @@ textarea {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
   background-image: url(../img/expand-button.svg);
   background-position: 50% 50%;
   background-size: 100%;
@@ -896,57 +893,25 @@ textarea {
 }
 
 .rating label:before {
-  content: "★";
+  content: "\2605";
 } 
 
 .rating label {
-  width: 33px;
   padding: 0;
   cursor: pointer;
   font-size: 32px;
-  line-height: 32px;
   color: gold;
   text-shadow: 1px 1px #c60;
 }
 
-.rating--4 label:nth-child(10n-8) {
+.rating--4 label[for="star-5"] {
   color: lightgrey;
   text-shadow: 1px 1px #bbb;
 }
 
-.rating--3 label:nth-child(10n-6) {
+.rating--3 label[for="star-4"] {
   color: lightgrey;
   text-shadow: 1px 1px #bbb;
-}
-
-.rating__container .rating label {
-  width: 33px;
-  padding: 0;
-  cursor: pointer;
-  font-size: 32px;
-  line-height: 32px;
-  color: rgb(165, 164, 164);
-  text-shadow: 1px 1px rgb(107, 107, 107);
-}
-
-.rating__container .rating > input:checked ~ label {
-  color: gold;
-  text-shadow: 1px 1px #c60;
-}
-
-.rating__container .rating:not(:checked) > label:hover,
-.rating__container .rating:not(:checked) > label:hover ~ label {
-  color: gold;
-  text-shadow: 1px 1px goldenrod;
-}
-
-.rating__container .rating > input:checked + label:hover,
-.rating__container .rating > input:checked + label:hover ~ label,
-.rating__container .rating > input:checked ~ label:hover,
-.rating__container .rating > input:checked ~ label:hover ~ label,
-.rating__container .rating > label:hover ~ input:checked ~ label {
-  color: gold;
-  text-shadow: 1px 1px #c60;
 }
 
 .customer__img {
@@ -1068,9 +1033,9 @@ textarea {
   background: #c49b84;
   border-radius: 50%;
   position: relative;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
   margin: 0 auto;
 }
@@ -1081,9 +1046,9 @@ textarea {
   height: 5px;
   border-radius: 10px;
   background: rgb(255, 255, 255);
-  -webkit-transition: 0.25s ease;
-  -o-transition: 0.25s ease;
-  transition: 0.25s ease;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   position: absolute;  
 }
 
@@ -1155,6 +1120,31 @@ textarea {
           justify-content: flex-start;
 }
 
+.rating__container .rating label {
+  color: rgb(165, 164, 164);
+  text-shadow: 1px 1px rgb(107, 107, 107);
+}
+
+.rating__container .rating:not(:checked) label:hover,
+.rating__container .rating:not(:checked) label:hover ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+.rating__container .rating > #star:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+
+/* .rating__container .rating > input:checked + label:hover,
+.rating__container .rating > input:checked + label:hover ~ label,
+.rating__container .rating > input:checked ~ label:hover,
+.rating__container .rating > input:checked ~ label:hover ~ label,
+.rating__container .rating > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+} */
+
 .add-text{
   text-align: left;
   margin-bottom: 6px;
@@ -1168,18 +1158,13 @@ textarea {
   cursor: pointer;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.input__wrapper .input__file--choose:hover {
-  -webkit-box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 15%);
-          box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 15%);
 }
 
 .input__wrapper .input__file--choose {
@@ -1210,7 +1195,7 @@ textarea {
     margin-left: 0px;
     margin-right: 10px;
   }
-  .brends__item:nth-child(5n) {
+  .brends__item:nth-child(n) {
     margin-top: 10px;
   }
   .brends__list {
@@ -1219,13 +1204,13 @@ textarea {
 }
 
 @media screen and (min-width: 477px) {
-  .brends__item:nth-child(5n) {
+  .brends__item:nth-child(n) {
     margin-top: 0;
   }
-  .brends__item:nth-child(2n), .brends__item:nth-child(4n) {
+  .brends__item:nth-child(2n), .brends__item:nth-child(4) {
     margin-left: 0px;
   }
-  .brends__item:nth-child(4n), .brends__item:nth-child(5n) {
+  .brends__item:nth-child(4), .brends__item:nth-child(5) {
     margin-bottom: 0 !important;
   }
 } 
@@ -1264,16 +1249,6 @@ textarea {
     left: 70px;
     font-size: 16px;
   }
-  .services__item button {
-    width: 47%;
-    height: 100%;
-    display: block;
-    margin-top: 0;
-    margin-right: 0; 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    font-size: 14px;
-  }
   .services__item {
     width: 100%;
     height: 25%;
@@ -1284,8 +1259,18 @@ textarea {
         -ms-flex-direction: row;
             flex-direction: row;
     position: relative;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+  }
+  .services__item button {
+    width: 47%;
+    height: 100%;
+    display: block;
+    margin-top: 0;
+    margin-right: 0; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 14px;
   }
   .front::after {
     display: none;
@@ -1311,13 +1296,6 @@ textarea {
   }
   .flip {
     /* pointer-events: none; */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
   }
@@ -1556,7 +1534,11 @@ textarea {
   .input__file--choose {
     display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
+    display: flex !important;
+  }
+  .input__wrapper .input__file--choose:hover {
+    -webkit-box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 15%);
+            box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 15%);
   }
 }
 
